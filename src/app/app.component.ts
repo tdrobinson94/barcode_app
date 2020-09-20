@@ -18,7 +18,7 @@ export class AppComponent implements AfterViewInit {
   barcodeValue;
 
   ngAfterViewInit() {
-    // this.barecodeScanner.start();
+    this.barecodeScanner.start();
   }
 
   onValueChanges(result) {
