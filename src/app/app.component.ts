@@ -10,7 +10,7 @@ export class AppComponent implements AfterViewInit {
   title = 'barcode-app';
 
 
-  scannerEnabled = false;
+  scannerEnabled = true;
 
   @ViewChild(BarecodeScannerLivestreamComponent)
   barecodeScanner: BarecodeScannerLivestreamComponent;
