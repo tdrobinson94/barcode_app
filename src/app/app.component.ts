@@ -33,7 +33,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         target: document.querySelector('.barcode_scanner_wrapper')    // Or '#yourElement' (optional)
       },
       decoder : {
-        readers : ["upc_reader"]
+        readers : ["code_39_vin_reader"]
       },
       locate: true
     }, function(err) {
