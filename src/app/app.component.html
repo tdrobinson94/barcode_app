@@ -5,10 +5,16 @@
     <div class="page_content_wrapper">
       <div class="button_wrapper">
         <button class="btn stop" (click)="stopScanner()">Stop</button>
-        <button class="btn start" (click)="startScanner()">Start</button>
+        <button class="btn start" (click)="startScanner()">Restart</button>
       </div>
       <div class="barcode_scanner_wrapper">
-
+        <div class="barcode_popup_wrapper">
+          <div class="barcode_popup">
+            <h1></h1>
+          </div>
+        </div>
+        <video src=""></video>
+        <canvas class="drawingBuffer"></canvas>
       </div>
     </div>
 

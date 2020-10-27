@@ -23,6 +23,7 @@ h1 {
 
 .barcode_scanner_wrapper {
     text-align: center;
+    position: relative;
 }
 
 .button_wrapper {
@@ -38,4 +39,31 @@ h1 {
 video {
     width: 100%;
     max-width: 800px;
+}
+
+.barcode_popup_wrapper {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    right: 15%;
+    bottom: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.5);
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.barcode_popup {
+    background: rgba(255,255,255,.4);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.barcode_popup h1 {
+    color: #fff;
+    font-size: 14px;
 }

@@ -1,4 +1,5 @@
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
+import $ from 'jquery';
 import Quagga from 'quagga';
 
 @Component({
@@ -9,6 +10,7 @@ import Quagga from 'quagga';
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'barcode-app';
 
+
   ngOnInit() {
     this.startScanner();
   }
@@ -18,10 +20,12 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   stopScanner() {
-    Quagga.stop();
+    console.log('detection is off.')
+    Quagga.stop()
   }
 
   startScanner() {
+    $('.barcode_popup').hide();
     Quagga.init({
       inputStream : {
         name : "Live",
@@ -29,7 +33,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         target: document.querySelector('.barcode_scanner_wrapper')    // Or '#yourElement' (optional)
       },
       decoder : {
-        readers : ["code_128_reader"]
+        readers : ["upc_reader"]
       },
       locate: true
     }, function(err) {
@@ -39,6 +43,14 @@ export class AppComponent implements OnInit, AfterViewInit {
         }
         console.log("Initialization finished. Ready to start");
         Quagga.start();
+    });
+
+    Quagga.onDetected(function(data) {
+      $('.barcode_popup h1').html("Barcode: " + data.codeResult.code);
+      $('.barcode_popup').show();
+      console.log(data.codeResult);
+      Quagga.stop();
+      return
     });
   }
 
