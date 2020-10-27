@@ -1,11 +1,13 @@
 <div class="page_container">
 
     <h1>Barcode Scanner</h1>
+    <p>Click start to scan a barcode.</p>
 
     <div class="page_content_wrapper">
       <div class="button_wrapper">
         <button class="btn stop" (click)="stopScanner()">Stop</button>
-        <button class="btn start" (click)="startScanner()">Restart</button>
+        <button class="btn start" (click)="startScanner()">Start</button>
+        <button class="btn restart" (click)="startScanner()">Restart</button>
       </div>
       <div class="barcode_scanner_wrapper">
         <div class="barcode_popup_wrapper">

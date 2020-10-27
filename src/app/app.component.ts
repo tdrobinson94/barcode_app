@@ -12,7 +12,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit() {
-    this.startScanner();
+    // this.startScanner();
+    $('.barcode_popup, .barcode_popup_wrapper, .restart').hide();
   }
 
   ngAfterViewInit() {
@@ -25,6 +26,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   startScanner() {
+    $('.barcode_popup_wrapper, .restart').show();
+    $('.start').hide();
     $('.barcode_popup').hide();
     Quagga.init({
       locate: false,
@@ -53,6 +56,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
 
     Quagga.onDetected(function(data) {
+      window.navigator.vibrate(300);
       $('.barcode_popup h1').html("Barcode: " + data.codeResult.code);
       $('.barcode_popup').show();
       console.log(data.codeResult);
