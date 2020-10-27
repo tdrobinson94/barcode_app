@@ -49,7 +49,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       $('.barcode_popup h1').html("Barcode: " + data.codeResult.code);
       $('.barcode_popup').show();
       console.log(data.codeResult);
-      Quagga.stop();
+      Quagga.offDetected();
       return
     });
   }
