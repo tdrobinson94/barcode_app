@@ -7,7 +7,7 @@ h1 {
     text-align: center;
 }
 
-.page_content {
+.page_content_wrapper {
     width: 100%;
     max-width: 800px;
     margin: auto;
@@ -19,4 +19,18 @@ h1 {
     display: block;
     max-width: 500px;
     transition: all 1s ease-in-out;
+}
+
+.barcode_scanner_wrapper {
+    text-align: center;
+}
+
+.button_wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.drawingBuffer {
+    display: none;
 }
