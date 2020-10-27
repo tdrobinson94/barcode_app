@@ -27,15 +27,22 @@ export class AppComponent implements OnInit, AfterViewInit {
   startScanner() {
     $('.barcode_popup').hide();
     Quagga.init({
+      locate: false,
       inputStream : {
         name : "Live",
         type : "LiveStream",
+        area: { // defines rectangle of the detection/localization area
+          top: "35%",    // top offset
+          right: "20%",  // right offset
+          left: "20%",   // left offset
+          bottom: "35%"  // bottom offset
+        },
+        singleChannel: false, // true: only the red color-channel is read
         target: document.querySelector('.barcode_scanner_wrapper')    // Or '#yourElement' (optional)
       },
       decoder : {
         readers : ["upc_reader"]
-      },
-      locate: true
+      }
     }, function(err) {
         if (err) {
             console.log(err);

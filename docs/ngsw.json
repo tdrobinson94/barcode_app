@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1603823445459,
+  "timestamp": 1603824636746,
   "index": "https://tdrobinson94.github.io/barcode_app/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://tdrobinson94.github.io/barcode_app/favicon.ico",
         "https://tdrobinson94.github.io/barcode_app/index.html",
-        "https://tdrobinson94.github.io/barcode_app/main.a116d552d6651feda00c.js",
+        "https://tdrobinson94.github.io/barcode_app/main.b94452c033412839f657.js",
         "https://tdrobinson94.github.io/barcode_app/manifest.webmanifest",
         "https://tdrobinson94.github.io/barcode_app/polyfills.a4021de53358bb0fec14.js",
         "https://tdrobinson94.github.io/barcode_app/runtime.e227d1a0e31cbccbf8ec.js",
@@ -52,8 +52,8 @@
     "https://tdrobinson94.github.io/barcode_app/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://tdrobinson94.github.io/barcode_app/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://tdrobinson94.github.io/barcode_app/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://tdrobinson94.github.io/barcode_app/index.html": "94e7f2e53cd78f0fa56f0692ae4f4a412da9a16b",
-    "https://tdrobinson94.github.io/barcode_app/main.a116d552d6651feda00c.js": "3afc86ecc898a9765d1b3f9ba03c570f98c07c38",
+    "https://tdrobinson94.github.io/barcode_app/index.html": "f2935da6ca20a22bc85bc22c6ad9205058bde089",
+    "https://tdrobinson94.github.io/barcode_app/main.b94452c033412839f657.js": "b5ec55ea49bf0de23626010b4bf042a46817540c",
     "https://tdrobinson94.github.io/barcode_app/manifest.webmanifest": "9ceaedb4555fb7b51d3f5ccb042c311687596df7",
     "https://tdrobinson94.github.io/barcode_app/polyfills.a4021de53358bb0fec14.js": "b47435a9ef2a4829f2f9dfd35599bde3614981b1",
     "https://tdrobinson94.github.io/barcode_app/runtime.e227d1a0e31cbccbf8ec.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
