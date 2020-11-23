@@ -23,6 +23,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     ],
     codeDuplicateFilter: 1000,
   });
+  barcode: any;
 
   ngOnInit() {
 
@@ -35,7 +36,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   onScan(event: ScanResult) {
     const barcode = event.barcodes[0].data;
 
-    alert(barcode);
+    console.log(barcode);
+    this.barcode = barcode;
   }
 
 }

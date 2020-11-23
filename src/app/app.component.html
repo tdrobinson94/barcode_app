@@ -9,6 +9,7 @@
         <button class="btn start">Start</button>
         <button class="btn restart">Restart</button>
       </div>
+      <p *ngIf="barcode">{{ barcode }}</p>
       <div class="barcode_scanner_wrapper">
         <scandit-sdk-barcode-picker [scanSettings]="scanSettings" (scan)="onScan($event)">
         </scandit-sdk-barcode-picker>
