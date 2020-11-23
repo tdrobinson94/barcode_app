@@ -1,6 +1,7 @@
 import { Component, ViewChild, OnInit, AfterViewInit } from '@angular/core';
+import { Background } from '@nativescript/core';
 import $ from 'jquery';
-import { Barcode, BarcodePicker, ScanSettings, configure, ScanResult } from 'scandit-sdk';
+import { Barcode, BarcodePicker, ScanSettings, ScanResult, Camera, CameraAccess, CameraSettings } from 'scandit-sdk-angular';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     ],
     codeDuplicateFilter: 1000,
   });
+  showBarcode = false;
+
   barcode: any;
 
   ngOnInit() {
@@ -33,11 +36,21 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   }
 
+  startScanner() {
+    this.showBarcode = true;
+  }
+
+  stopScanner() {
+    this.showBarcode = false;
+  }
+
   onScan(event: ScanResult) {
     const barcode = event.barcodes[0].data;
 
     console.log(barcode);
     this.barcode = barcode;
+
+    this.showBarcode = false;
   }
 
 }

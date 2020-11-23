@@ -23,7 +23,7 @@ h1, p {
 
 .barcode_scanner_wrapper {
     text-align: center;
-    position: relative;
+    position: fixed;
 }
 
 .button_wrapper {
