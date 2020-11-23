@@ -5,18 +5,13 @@
 
     <div class="page_content_wrapper">
       <div class="button_wrapper">
-        <button class="btn stop" (click)="stopScanner()">Stop</button>
-        <button class="btn start" (click)="startScanner()">Start</button>
-        <button class="btn restart" (click)="startScanner()">Restart</button>
+        <button class="btn stop">Stop</button>
+        <button class="btn start">Start</button>
+        <button class="btn restart">Restart</button>
       </div>
       <div class="barcode_scanner_wrapper">
-        <div class="barcode_popup_wrapper">
-          <div class="barcode_popup">
-            <h1></h1>
-          </div>
-        </div>
-        <video src=""></video>
-        <canvas class="drawingBuffer"></canvas>
+        <scandit-sdk-barcode-picker [scanSettings]="scanSettings" (scan)="onScan($event)">
+        </scandit-sdk-barcode-picker>
       </div>
     </div>
 

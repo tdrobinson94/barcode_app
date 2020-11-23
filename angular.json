@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "barcode-app"
+  "defaultProject": "barcode-app",
+  "cli": {
+    "analytics": "08babd03-834f-4e75-9511-a8597240f247"
+  }
 }
