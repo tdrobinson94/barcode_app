@@ -25,6 +25,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     codeDuplicateFilter: 1000,
   });
   showBarcode = false;
+  hideMessage = false;
+  hideAlert = false;
+  barcodeType: any;
+  raw: any;
 
   barcode: any;
 
@@ -46,11 +50,20 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   onScan(event: ScanResult) {
     const barcode = event.barcodes[0].data;
+    const barcodeType = event.barcodes[0].symbology;
 
     console.log(barcode);
     this.barcode = barcode;
+    this.barcodeType = barcodeType;
+    this.hideAlert = true;
 
-    this.showBarcode = false;
+    setTimeout(() => {
+      this.showBarcode = false;
+    }, 200);
+  }
+
+  closeAlert() {
+    this.hideAlert = false;
   }
 
 }

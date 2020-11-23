@@ -1,15 +1,17 @@
 <div class="page_container">
 
     <h1>Barcode Scanner</h1>
-    <p>Click start to scan a barcode.</p>
+    <p *ngIf="!hideMessage">Click start to scan a barcode.</p>
 
     <div class="page_content_wrapper">
       <div class="button_wrapper">
-        <button class="btn stop" (click)="stopScanner()">Stop</button>
-        <button class="btn start" (click)="startScanner()">Start</button>
-        <button class="btn restart" (click)="startScanner()">Restart</button>
+        <button *ngIf="showBarcode" class="btn stop" (click)="stopScanner()">Stop</button>
+        <button *ngIf="!showBarcode" class="btn start" (click)="startScanner()">Start</button>
       </div>
-      <p *ngIf="barcode">{{ barcode }}</p>
+      <div *ngIf="hideAlert" class="barcode_alert">
+        <p>{{ barcodeType }}: {{ barcode }}</p>
+        <button class="btn alert" (click)="closeAlert()">Close</button>
+      </div>
       <div *ngIf="showBarcode" class="barcode_scanner_wrapper">
         <scandit-sdk-barcode-picker [scanSettings]="scanSettings" (scan)="onScan($event)">
         </scandit-sdk-barcode-picker>
