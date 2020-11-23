@@ -68,13 +68,12 @@ h1 {
 }
 
 .barcode_alert {
-    position: fixed;
     height: 50%;
-    top: 0;
-    transform: translate(50%, 50%);
     text-align: center;
-    width: 50%;
-    min-width: 200px;
+    width: calc(80% - 40px);
+    min-width: 300px;
+    padding: 20px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
